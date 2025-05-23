@@ -36,6 +36,15 @@ app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
 app.use("/api/reviews", reviewRoute);
 
+app.get("/", (req, res) => {
+  res.send("Hello from WorkHub server!");
+}
+);
+app.get("/api/test", (req, res) => {
+  res.send("Hello from the test route!");
+}
+);
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
