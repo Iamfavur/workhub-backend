@@ -61,8 +61,8 @@ This is basically a fiverr clone version by Favour Uduose.
 
 1. **Clone the repository:**
    ```sh
-   git clone <repo-url>
-   cd api
+   git clone https://github.com/Iamfavur/workhub-backend.git
+   cd workhub-backend
    ```
 
 2. **Install dependencies:**
