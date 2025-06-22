@@ -24,7 +24,7 @@ const connect = async () => {
   }
 };
 
-app.use(cors({ origin: "https://workhub-frontend-git-main-iamfavurs-projects.vercel.app", credentials: true }));
+app.use(cors({ origin: "*", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
