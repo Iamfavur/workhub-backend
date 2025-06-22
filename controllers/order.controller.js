@@ -143,15 +143,15 @@ export const checkOrderStatus= async (req,res)=>{
                 {_id: buyerId, },
                 {$set: {walletBalance: newBuyerBalance, },}
             );
-            res.status(200).json("Buyer money has been refunded successfully")
+            return res.status(200).json("Buyer money has been refunded successfully")
         }else if (order.buyerCompleted === false && order.orderCompleted === false){
             await User.findOneAndUpdate(
                 {_id: buyerId, },
                 {$set: {walletBalance: newBuyerBalance, },}
             );
-            res.status(200).json("Buyer money has been refunded successfully")
+            return res.status(200).json("Buyer money has been refunded successfully")
         }
-        res.status(200).json("")
+        return res.status(200).json("")
     } catch (error) {
         res.status(500).json(error.message)
     }
